@@ -6,8 +6,10 @@
 		<div class="jumbotron">
 			<div class="container">
 				{% if businesses %}
-					<h1> {{ businesses }}</h1>
-					<a href="{{ url_for('index') }}">Look up another address</a>
+					{% for busniess in busniesses %}
+						<h1>{{ business.name }}</h1>
+						<a href="{{ url_for('index') }}">Look up another address</a>
+					{% endfor %}
 				{% else %}
 					<h1>Hello! Where do you live?</h1>
 					<form action="/" class="form-inline">
