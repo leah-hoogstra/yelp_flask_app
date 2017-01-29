@@ -8,8 +8,7 @@ app = Flask(__name__)
 def index():
     address = request.values.get('address', "Anchorage, AK")
     term = request.values.get('term', "restaurants")
-    businesses = []
-    business = yelp_api.get_businesses(term, address)
+    businesses = yelp_api.get_businesses(term, address)
     return render_template('index.html', businesses=businesses)
 
 @app.route('/about')
