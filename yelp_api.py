@@ -19,7 +19,7 @@ def get_businesses(term, location):
     params = {
     'term': term,
     'lang': 'en',
-    'limit': 10
+    'limit': 3
     }
 
     response = client.search(location, **params)
