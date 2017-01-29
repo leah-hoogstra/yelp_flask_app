@@ -35,8 +35,3 @@ def get_businesses(term, location):
         })       
     
     return business_list
-
-businesses = get_businesses("food", "Westchester, CA")
-
-
-print(businesses)
